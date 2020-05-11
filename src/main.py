@@ -20,4 +20,4 @@ optimizer = torch.optim.Adam(model.parameters(), lr=0.00001)
 epoch = 10000
 
 for i in range(epoch): 
-  train_the_model(train_loader, model, criterion, optimizer, epoch)
+  train_the_model(train_loader, model, criterion, optimizer, i)
