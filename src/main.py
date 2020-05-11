@@ -1,5 +1,5 @@
 from model import *
-from customlossfunction import *
+from custom_loss_function import *
 from preprocessing import *
 from helper_module import *
 from dataset import *
