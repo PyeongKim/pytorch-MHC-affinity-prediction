@@ -39,6 +39,7 @@ class CustomMSE(nn.Module):
         diff3 = Variable(torch.tensor(diff3).cuda(), requires_grad=True)
         loss3 = F.mse_loss(transformed_output.float(), target.float(), reduce=False)*diff3
         
-        loss = loss1 + loss2 + loss3
+        diff = Variable((torch.tensor(np.abs(diff))).cuda(), requires_grad=True)
+        loss = (loss1 + loss2 + loss3)*diff
         
         return loss.sum()
